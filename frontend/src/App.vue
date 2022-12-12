@@ -1,6 +1,8 @@
 <template>
-  <!--Aqui estão sendo montados todos os componentes-->
-  <div>
+  <!-- Este componente "App.vue", é a página principal do site, 
+       é onde todos os componentes vão ser carregados -->
+    <div>
+    <!--Aqui estão sendo montados estes componentes-->
     <Header />
     <Sidebar />
     <!-- Todas as "rotas" serão carregadas aqui -->
