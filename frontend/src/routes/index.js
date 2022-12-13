@@ -4,8 +4,8 @@ import {
   createRouter
 } from 'vue-router';
 
-import Home from '../views/Home';
-import About from '../views/About';
+import Home from '../views/HomeView';
+import About from '../views/AboutView';
 
 const routes = [{
     path: '/',
