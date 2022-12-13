@@ -1,6 +1,7 @@
 <template>
   <!-- Este componente "App.vue", é a página principal do site, 
-       é onde todos os componentes vão ser carregados -->
+       é o componente principal.É onde todos os componentes vão
+       ser carregados -->
     <div>
     <!--Aqui estão sendo montados estes componentes-->
     <Header />
