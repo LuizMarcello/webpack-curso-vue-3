@@ -1,26 +1,40 @@
 /* Aqui as rotas */
-import {
-  createWebHistory,
-  createRouter
-} from 'vue-router';
+import { createWebHistory, createRouter } from "vue-router";
+/* O "@" significa a pasta ".src". */
+import HomeView from '../views/HomeView.vue';
 
-import Home from '../views/HomeView';
-import About from '../views/AboutView';
+/*
+Os componentes utilizados no roteamento
+tem que vir da pasta "views"
+*/
 
-const routes = [{
+const routes = [
+  {
     path: '/',
-    component: Home
+    name: 'home',
+    component: HomeView
   },
 
   {
-    path: '/about',
-    component: About
-  }
-]
+    path: "/products",
+    name: "products",
+    /* Aqui está chamando o componente usando "lazy-loaded"
+       Os componentes só vão ser chamados, quando realmente
+       precisarmos deles. */
+    component: () => import("../views/ProductsView.vue"),
+  },
+
+  {
+    path: "/about",
+    name: "about",
+    /* lazy-loaded */
+    component: () => import("../views/AboutView.vue"),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 
 export default router;
