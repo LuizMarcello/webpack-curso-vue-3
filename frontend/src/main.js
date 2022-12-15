@@ -1,10 +1,10 @@
 /* Este componente é o "ponto de entrada" da aplicação */
 /* Pegando aqui a "instância do vue" */
-// import { createApp } from "vue";
+import { createApp } from "vue";
 // ou
-import {
-  createApp
-} from "vue/dist/vue.esm-bundler.js";
+//import {
+  //createApp
+//} from "vue/dist/vue.esm-bundler.js";
 /*
  "App": Sendo o componente principal, onde vão ser montadas
   todas as peças do layout, o header, o footer, o sidebar,

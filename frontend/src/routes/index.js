@@ -1,7 +1,7 @@
 /* Aqui as rotas */
 import { createWebHistory, createRouter } from "vue-router";
 /* O "@" significa a pasta ".src". */
-import HomeView from '../views/HomeView.vue';
+import HomeView from "../views/HomeView.vue";
 
 /*
 Os componentes utilizados no roteamento
@@ -10,9 +10,9 @@ tem que vir da pasta "views"
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: HomeView,
   },
 
   {

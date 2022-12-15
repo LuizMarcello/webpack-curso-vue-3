@@ -1,4 +1,5 @@
 <template>
+  <!-- Tag <template>: O que é mostrado para o usuário -->
   <h2 id="my-app">Apppp</h2>
 
   <p class="teste">LuizMarcello</p>
@@ -20,6 +21,8 @@
 </template>
 
 <script>
+/* Tag <script>: O "comportamento" do componente */
+
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 
@@ -28,18 +31,19 @@ import { RouterView } from "vue-router";
 export default {
   components: {
     Header,
-    Sidebar,
+     Sidebar,
     RouterView,
   },
 };
 </script>
 
-<style scoped>
+<style>
+/* Tag <style>: A estilização do template */
 /* @import "./assets/app.css"; */
 #my-app {
-  color: red;
+  background-color: red;
 }
 .teste {
-  color: red;
+  background-color: red;
 }
 </style>
