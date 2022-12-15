@@ -1,16 +1,22 @@
 <template>
-  <div>
-    <!-- Este componente "App.vue", é a página principal do site, 
+  <h2 id="my-app">Apppp</h2>
+
+  <p class="teste">LuizMarcello</p>
+
+  <!-- Este componente "App.vue", é a página principal do site, 
        é o componente principal.É onde todos os componentes vão
        ser carregados -->
 
-    <!--Aqui estão sendo montados estes componentes-->
-    <Header />
-    <Sidebar />
+  <!-- Aqui estão sendo montados estes componentes -->
 
-    <!-- Todas as "rotas" dos componentes serão carregadas aqui -->
-    <RouterView />
-  </div>
+  <!-- Componente global(No main.js) -->
+  <Teste />
+
+  <Header />
+  <Sidebar />
+
+  <!-- Todas as "rotas" dos componentes serão carregadas aqui -->
+  <RouterView />
 </template>
 
 <script>
@@ -27,3 +33,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* @import "./assets/app.css"; */
+#my-app {
+  color: red;
+}
+.teste {
+  color: red;
+}
+</style>
