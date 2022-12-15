@@ -1,13 +1,13 @@
 <template>
   
-    <h2>Header (options api)</h2>
+    <h2>Footer (options api)</h2>
   
 </template>
 
 <script>
 /* options api */
 export default {
-  name: "Header",
+  name: "Footer",
 };
 </script>
 
