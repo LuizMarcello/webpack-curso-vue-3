@@ -1,6 +1,6 @@
 <template>
   
-    <h2>Footer (options api)</h2>
+    <h2>Foottter</h2>
   
 </template>
 

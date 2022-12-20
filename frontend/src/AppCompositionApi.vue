@@ -1,14 +1,14 @@
 <template>
   <!-- Tag <template>: O que é mostrado para o usuário -->
-  <Header />
+  <!-- <Header /> -->
 
   <!-- <button v-on:click="count++">Add {{ count }}</button> -->
   <!-- ou -->
-  <button v-on:click="add()">Add {{ count }}</button>
+  <!-- button v-on:click="add()">Add {{ count }}</button> -->
 
-  <h2>App (options api)</h2>
+  <h2>App (composition api)</h2>
 
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <script>
@@ -16,45 +16,69 @@
 
 /* Pode ser de duas maneiras: */
 /* Trabalhando com "COMPOSITION API": Versão 3 do vuejs */
+//import Header from "./components/Header.vue";
+//import Footer from "./components/Footer.vue";
+
+//import { ref } from "vue";
+
+//export default {
+  /* Aqui são registrados os componentes,
+     porque serão utilizados. */
+  //components: { Header, Footer },
+
+  /* composition api necessita do setup() */
+  //setup() {
+    /* Reatividade no composition api: */
+    /* 2 maneiras:
+       Com o reactive (para objetos)
+       Com o ref() Dados mais primitivos(numeros,etc...)*/
+    /* Colocar aqui o que é "reativo" */
+    //const count = ref(0);
+
+    //function add() {
+      /* Quando se usa reatividade com ref(),
+         tem que colocar este "value". */
+      //count.value++;
+    //}
+
+    /* Return para aparecer(poderem ser utilizados)
+       no template */
+    //return {
+      //count,
+      //add,
+    //};
+  //},
+//};
+
+/* Um resuminho: */
+/* Options api: Fica meio ingessado */
+/* Composition api: Tudo que precisa ser utilizado dentro
+   do setup(), importa diretamente do "vue"
+   É mais desaclopado */
+
+   ////////////////////////////////////////////////////////////
+
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
 import { ref } from "vue";
 
 export default {
-  /* Aqui são registrados os componentes,
-     porque serão utilizados. */
   components: { Header, Footer },
-
-  /* composition api necessita do setup() */
+  
   setup() {
-    /* Reatividade no composition api: */
-    /* 2 maneiras:
-       Com o reactive (para objetos)
-       Com o ref() Dados mais primitivos(numeros,etc...)*/
-    /* Colocar aqui o que é "reativo" */
     const count = ref(0);
 
     function add() {
-      /* Quando se usa reatividade com ref(),
-         tem que colocar este "value". */
-      count.value++;
+        count.value++;
     }
-
-    /* Return para aparecer(poderem ser utilizados)
-       no template */
+    
     return {
       count,
       add,
     };
   },
 };
-/* Um resuminho: */
-/* Options api: Fica meio ingessado */
-
-/* Composition api: Tudo que precisa ser utilizado dentro
-   do setup(), importa diretamente do "vue"
-   É mais desaclopado */
 </script>
 
 <style>
