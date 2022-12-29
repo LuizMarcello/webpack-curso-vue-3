@@ -1,0 +1,60 @@
+<script>
+/* Tag <script>: O "comportamento" do componente */
+
+/* Pode ser de duas maneiras: */
+/* Trabalhando com "OPTIONS API": Versões 2 e 3 do vuejs */
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+
+export default {
+/* Aqui são registrados os componentes,
+   porque serão utilizados. */
+  components: { Header, Footer },
+
+/* data(): No "optionsApi", para trabalhar com a "reatividade".
+           Pode ser objetos(arrays), primitivos, etc... */
+  data() {
+    return {
+/* Colocar aqui tudo que é "reativo" */
+/* Para acessar estas propriedades reativas no template,
+   é só colocar abre/fecha chaves duas vezes. */
+/* Para acessar estas propriedades reativas dentro da
+   tag <script>, tem que usar o "this" */
+      count: 0,
+      showHeader: false,
+      username: "LuizMarcello",
+/* Agora um array de objetos */
+      users: [
+        {
+          firstName: "Luiz",
+          age: 61,
+        },
+
+        {
+          firstName: "Valeria",
+          age: 41,
+        },
+      ],
+    };
+  },
+
+  methods: {
+    add() {
+      this.count++;
+    },
+  },
+
+  mounted() {
+    console.log(this.count);
+  },
+
+  updated() {
+    console.log("updated");
+  },
+};
+/* Um resuminho: */
+/* Options api: Fica meio ingessado */
+/* Composition api: Tudo que precisa ser utilizado dentro
+   do setup(), importa diretamente do "vue"
+   É mais desaclopado */
+</script>

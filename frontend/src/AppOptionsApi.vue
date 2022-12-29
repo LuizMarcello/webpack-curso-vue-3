@@ -4,6 +4,14 @@
     <Header />
   </div>
 
+  {{ count }}
+
+  {{ username }}
+
+  <ul>
+    <li v-for="user in users">{{ user.firstName }} - {{ user.age }}</li>
+  </ul>
+
   <button v-on:click="showHeader = !showHeader">Toggle header</button>
 
   <!-- <button v-on:click="count++">Add {{ count }}</button> -->
@@ -22,38 +30,6 @@
 </template>
 
 <script>
-/* Tag <script>: O "comportamento" do componente */
-
-/* Pode ser de duas maneiras: */
-/* Trabalhando com "OPTIONS API": Versões 2 e 3 do vuejs */
-//import Header from "./components/Header.vue";
-//import Footer from "./components/Footer.vue";
-
-//export default {
-  /* Aqui são registrados os componentes,
-     porque serão utilizados. */
-  //components: { Header, Footer },
-
-  /* data(): Para trabalhar com a "reatividade" */
-  //data() {
-    //return {
-      /* Colocar aqui tudo que é "reativo" */
-      //count: 0,
-    //};
-  //},
-
-  //methods: {
-    //add() {
-      //this.count++;
-    //},
-  //},
-//};
-/* Um resuminho: */
-/* Options api: Fica meio ingessado */
-/* Composition api: Tudo que precisa ser utilizado dentro
-   do setup(), importa diretamente do "vue"
-   É mais desaclopado */
-
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
@@ -63,7 +39,19 @@ export default {
   data() {
     return {
       count: 0,
-      showHeader:false
+      showHeader: false,
+      username: "LuizMarcello",
+      users: [
+        {
+          firstName: "Luiz",
+          age: 61,
+        },
+
+        {
+          firstName: "Valeria",
+          age: 41,
+        },
+      ],
     };
   },
 
@@ -74,15 +62,13 @@ export default {
   },
 
   mounted() {
-    console.log("mounted");
+    console.log(this.count);
   },
 
   updated() {
     console.log("updated");
   },
 };
-
-///////////////////////////////////////////////////////////
 </script>
 
 <style>

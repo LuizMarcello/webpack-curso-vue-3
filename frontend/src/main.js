@@ -10,9 +10,11 @@ import { createApp } from "vue";
   todas as peças do layout, o header, o footer, o sidebar,
   o content...
 */
+import App from "./AppAxios.vue";
+//import App from "./AppVforVif.vue";
 //import App from "./AppOptionsApi.vue";
 //import App from "./AppCompositionApi.vue";
-import App from "./AppCompositionAmigavel.vue";
+//import App from "./AppCompositionAmigavel.vue";
 
 import router from "./routes/index.js";
 

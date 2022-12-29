@@ -1,0 +1,58 @@
+<!-- Composition api mais amigável: -->
+<script setup>
+/* Tag <script>: O "comportamento" do componente */
+
+/* Também com "COMPOSITION API": Versão 3 do vuejs */
+/* Outra maneira mais "amigável": */
+/* Não precisa registrar os componentes */
+/* Não precisa usar o return */
+/* Abrindo o <script> com "setup", tudo que for
+   criado dentro deste <script>, já terá acesso no template. */
+
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+
+import { onMounted, onUpdated, reactive, ref } from "vue";
+
+onMounted(() => {
+  console.log("mounted AppCompositionAmigavel.vue");
+  console.log(users)
+});
+
+onUpdated(() => {
+  console.log("updated AppCompositionAmigavel.vue");
+});
+
+/* Reatividade no "compositionApi": */
+/* 2 maneiras:
+   Com o reactive (para objetos)("arrays" de objetos)
+   Com o ref() Dados mais primitivos(string,numeros,booleanos,etc...)*/
+/* Colocar aqui o que é "reativo" */
+const count = ref(0);
+const userName = ref("Alexandrrre");
+/* Agora um array de objetos */
+const users = reactive([
+  {
+    firstName: "LuizMarcello",
+    age: 60,
+  },
+  {
+    firstName: "Valeria",
+    age: 41,
+  },
+]);
+
+let myName = ref('LuizzzMarcello')
+
+function add() {
+/* Quando se usa reatividade com "ref()"",
+   tem que colocar este "value". */
+/* Reatividade com "reactive", não precisa do "value" */
+   count.value++;
+}
+/* Um resuminho: */
+/* Options api: Fica meio ingessado */
+/* Composition api: Tudo que precisa ser utilizado dentro
+   do setup(), importa diretamente do "vue"
+   É mais desaclopado */
+</script>
