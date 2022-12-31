@@ -1,5 +1,12 @@
 <template>
   <!-- Tag <template>: O que é mostrado para o usuário -->
+
+  <img
+    :src="imageSrc"
+    alt=""
+    class="my-default-class"
+    :class="{ 'my-class': is_admin, 'my-other-class': !is_admin }"
+  />
   <!-- Com "v-show" é renderizado, só coloca o display=none do css -->
   <!-- Com "v-if" não é nem renderizado -->
   <!-- A diretiva "v-show" não funciona com <template>,
@@ -57,8 +64,10 @@ export default {
       /* Dentro do data(){return{}} coloca tudo que é "reativo" */
       /* Um array de objetos */
       users: [],
-
+      imageSrc: "https://picsum.photos/200/300",
+      classImg: "my-class",
       showHeader: true,
+      is_admin: false,
     };
   },
 
@@ -78,6 +87,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* Tag <style>: A estilização do template */
+.my-class {
+  border: solid 3px red;
+}
+
+.my-other-class {
+  border: solid 3px blue;
+}
 </style>
