@@ -19,7 +19,8 @@ import { ref } from "vue";
 
 export default {
   components: { Header, Footer },
-  
+
+  /* Reativos */
   setup() {
     const count = ref(0);
 
