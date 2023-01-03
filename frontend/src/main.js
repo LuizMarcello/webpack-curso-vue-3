@@ -10,7 +10,9 @@ import { createApp } from "vue";
   todas as peças do layout, o header, o footer, o sidebar,
   o content...
 */
-import App from "./AppEventosCompositionApi.vue";
+import App from "./AppEventosKeyBoardCompositionApi.vue";
+//import App from "./AppEventosKeyBoardOptionsApi.vue";
+//import App from "./AppEventosCompositionApi.vue";
 //import App from "./AppEventosOptionsApi.vue";
 //import App from "./AppCondicCompositionApi.vue";
 //import App from "./AppCondicVshowOptionsApi.vue";

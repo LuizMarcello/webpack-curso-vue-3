@@ -1,12 +1,12 @@
-/*!******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[3].use[0]!./src/AppEventosCompositionApi.vue?vue&type=style&index=0&id=42aada86&scoped=true&lang=css ***!
-  \******************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[3].use[0]!./src/AppEventosKeyBoardCompositionApi.vue?vue&type=style&index=0&id=4b4298ad&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
 
-/* Tag <style>: A estilização do template */
-.my-class[data-v-42aada86] {
-  border: solid 3px red;
+  /* Tag <style>: A estilização do template */
+.my-class[data-v-4b4298ad] {
+    border: solid 3px red;
 }
-.my-other-class[data-v-42aada86] {
-  border: solid 3px blue;
+.my-other-class[data-v-4b4298ad] {
+    border: solid 3px blue;
 }
-
+  
