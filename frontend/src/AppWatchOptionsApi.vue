@@ -89,7 +89,7 @@ export default {
         console.log("Carregou");
       },
 
-      /* Para o "watch" verificar todos os objetos dentro do array */
+      /* Para o "watch" verificar todos os objetos dentro do array de objetos*/
       deep: true,
 
       /* Para o "watch" também ser executado assim que o componente for montado */
