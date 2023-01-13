@@ -17,7 +17,7 @@
 <script>
 import format from "../src/services/format";
 import http from "../src/services/http";
-import Currency from "../src/components/Currency.vue";
+import Currency from "../src/components/CurrencyOptionsApi.vue";
 
 export default {
   /* Registrando este componente */
@@ -44,8 +44,10 @@ export default {
   },
 
   methods: {
+    /* Requisição para esta API do dólar */
     async getDolar(type = "USD-BRL") {
       const { data } = await http.get(
+        /* (``): Isto é uma template string */ 
         `https://economia.awesomeapi.com.br/json/last/` + type
       );
       const typeCurrency = type.split("-").join("");
@@ -58,6 +60,7 @@ export default {
   /* Propriedade computada */
   computed: {
     dolarToReaisValue() {
+      /* (``): Isto é uma template string */ 
       return `O valor em reais de ${format(this.dolarr, "en-US", "USD")} é de: ${format(
         this.dolarToReais,
         "pt-BR",
@@ -66,6 +69,7 @@ export default {
     },
 
     dolarTodayValue() {
+      /* (``): Isto é uma template string */ 
       return `O dólar hoje está em: ${format(this.dolarToday, "en-US", "USD")}`;
     },
   },
