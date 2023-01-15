@@ -10,7 +10,8 @@ import { createApp } from "vue";
   todas as peças do layout, o header, o footer, o sidebar,
   o content...
 */
-import App from "./AppDollarRealCompositionApi.vue";
+import App from "./AppPreventOnceOptionsApi.vue";
+//import App from "./AppDollarRealCompositionApi.vue";
 //import App from "./AppDollarRealOptionsApi.vue";
 //import App from "./AppWatchEffectCompositionApi.vue";
 //import App from "./AppWatchCompositionApi.vue";
