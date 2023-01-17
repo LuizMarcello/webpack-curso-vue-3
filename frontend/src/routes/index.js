@@ -30,6 +30,13 @@ const routes = [
     /* lazy-loaded */
     component: () => import("../views/AboutView.vue"),
   },
+
+  {
+    path: "/user/create",
+    name: "user-create",
+    /* lazy-loaded */
+    component: () => import("../views/UserCreateView.vue"),
+  },
 ];
 
 const router = createRouter({

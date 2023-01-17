@@ -17,8 +17,17 @@ use Illuminate\Support\Facades\Route;
 // Para o frontend, este backend será como uma "api", só
 // retornando os dados para este frontend
 // Colocar no frontend: api/users
-Route::get('users', function(){
+Route::get('/users', function () {
     return User::all();
+});
+
+Route::post('/user', function (Request $request) {
+    $request->validate([
+        'firstName' => 'required',
+        'lastName' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+    ])
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
