@@ -30,8 +30,9 @@ Route::post('/user', function (Request $request) {
     ], [
         'firstName.required' => 'O campo nome é obrigatório',
         'lastName.required' => 'O campo sobrenome é obrigatório',
+        'email.required' => 'O campo email é obrigatório',
         'email.unique' => 'Esse valor já está cadastrado',
-        'password.required' => 'O campo senha é obrigatório'
+        'password.required' => 'O campo senha é obrigatório',
     ]);
 });
 
