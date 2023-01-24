@@ -4,7 +4,7 @@
   <!--  {{ user.firstName }} {{ user.lastName }} -->
   <!-- Aqui no template, para chamar uma função: {{ fullName() }}  -->
   <!-- Aqui no template, para chamar uma propriedade: {{ fullName }}
-      mesmo que tenha sido criada abaixo como uma função.  -->
+       mesmo que tenha sido criada abaixo como uma função.  -->
   <!--  {{ fullName }} -->
 
   <ul>
@@ -22,7 +22,7 @@
   {{ functionCount() }}
   <button @click="countFunction++">Add function</button>
 
-  <br>
+  <br />
 
   <!-- Chamando esta "propriedade computada" -->
   {{ computedCount }}
@@ -71,9 +71,10 @@ export default {
    Em portugues ficou "dados computados".
 Uma "propriedade computada" trabalha em cima de uma "propriedade
 reativa", e é chamada no "template". Elas são "cacheadas". Se a propriedade
-reativa a qual ela se baseia não for alterada, ela não vai ler a mesma
-de novo, vai usar o que está no seu cache. São para coisas mais simples.
-Já as funções são "sempre" executadas.
+reativa a qual ela se baseia não for alterada, ela não vai ser executada, 
+não vai ler a mesma de novo, vai usar o que está no seu cache.
+ São para coisas mais simples.
+Já as funções não trabalham com cache, são "sempre" executadas.
 No "optionsApi", as "propriedades reativas" são criadas no
 "data()", por isso que a tradução ficou "dados computados". */
   computed: {
