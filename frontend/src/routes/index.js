@@ -23,7 +23,8 @@ const routes = [{
     /* Aqui está chamando o componente usando "lazy-loaded"
        Os componentes só vão ser chamados, quando realmente
        precisarmos deles. */
-    component: () => import("../views/ProductsView.vue"),
+    //component: () => import("../views/ProductsViewOptionsApi.vue"),
+    component: () => import("../views/ProductsViewCompositionApi.vue"),
   },
 
   {

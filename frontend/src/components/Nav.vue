@@ -4,6 +4,4 @@
   <router-link to="/user/create">UserCreate</router-link>
 </template>
 
-<script>
-
-</script>
+<script></script>
