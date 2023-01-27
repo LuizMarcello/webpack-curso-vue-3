@@ -2,13 +2,17 @@
   <!-- Slot nomeado -->
   <slot name="header"></slot>
 
-<!-- Slot default -->
+  <!-- Slot default -->
   <slot></slot>
 
-<!-- Slot nomeado -->
+  <!-- Slot nomeado -->
   <slot name="footer"></slot>
 </template>
 
-<script>
-export default {};
-</script>
+<!-- OptionsApi -->
+<!-- <script> -->
+<!-- export default {}; -->
+<!-- </script> -->
+
+<!-- Composition Api -->
+<script setup></script>
