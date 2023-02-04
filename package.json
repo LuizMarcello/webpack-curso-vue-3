@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bulma": "^0.9.4",
     "vue-currency-input": "^3.0.3"
   }
 }
