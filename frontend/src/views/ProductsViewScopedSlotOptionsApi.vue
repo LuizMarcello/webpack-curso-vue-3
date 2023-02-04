@@ -16,6 +16,7 @@ export default {
 
   data() {
     return {
+      /* Reativos */
       /* Um array de objetos */
       produuucts: [
         {
