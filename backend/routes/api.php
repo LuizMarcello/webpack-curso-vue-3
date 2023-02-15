@@ -21,6 +21,12 @@ Route::get('/users', function () {
     return User::all();
 });
 
+// Colocar no frontend: api/users/search
+Route::get('/users/search', function (Request $request) {
+    $user = $request->input('uusser');
+    return User::where('firstname', 'like', '%'.$user.'%')->get();
+});
+
 Route::post('/user', function (Request $request) {
     $request->validate([
         'firstName' => 'required',
