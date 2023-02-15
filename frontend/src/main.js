@@ -10,7 +10,10 @@ import { createApp } from "vue";
   todas as peças do layout, o header, o footer, o sidebar,
   o content...
 */
-import App from "./views/AppTemplateRefCompositionApi.vue";
+import App from "./AppBuscaOptionsApi.vue";
+//import App from "./AppDebounceCompositionApi.vue";
+//import App from "./AppDebounceOptionsApi.vue";
+//import App from "./views/AppTemplateRefCompositionApi.vue";
 //import App from "./views/AppTemplateRefOptionsApi.vue";
 //import App from "./views/ProductsViewScopedSlotCompositionApi.vue";
 //import App from "./views/ProductsViewScopedSlotOptionsApi.vue";
