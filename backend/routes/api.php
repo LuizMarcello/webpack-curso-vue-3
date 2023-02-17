@@ -24,7 +24,7 @@ Route::get('/users', function () {
 // Colocar no frontend: api/users/search
 Route::get('/users/search', function (Request $request) {
     $user = $request->input('uusser');
-    return User::where('firstname', 'like', '%'.$user.'%')->get();
+    return User::where('firstname', 'like', '%' . $user . '%')->get();
 });
 
 Route::post('/user', function (Request $request) {
