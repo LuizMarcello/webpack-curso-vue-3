@@ -1,20 +1,21 @@
 /* Este componente é o "ponto de entrada" da aplicação */
 /* Pegando aqui a "instância do vue" */
-import { createApp } from "vue";
+import {
+  createApp
+} from "vue";
 // ou
 //import {
-  //createApp
+//createApp
 //} from "vue/dist/vue.esm-bundler.js";
 /*
  "App": Sendo o componente principal, onde vão ser montadas
   todas as peças do layout, o header, o footer, o sidebar,
   o content...
 */
-<<<<<<< HEAD
-import App from "./AppMixinsOptionsApi.vue";
-=======
-import App from "./AppBuscaCompositionApi.vue";
->>>>>>> 7695c6d8eb81aabf52123503962d14d428432e34
+
+import App from "./AppComposablesCompositionApi.vue";
+//import App from "./AppMixinsOptionsApi.vue";
+//import App from "./AppBuscaCompositionApi.vue";
 //import App from "./AppBuscaOptionsApi.vue";
 //import App from "./AppDebounceCompositionApi.vue";
 //import App from "./AppDebounceOptionsApi.vue";

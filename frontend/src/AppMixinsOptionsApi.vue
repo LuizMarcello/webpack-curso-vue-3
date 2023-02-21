@@ -21,8 +21,8 @@
 /* Como lá nos mixins foi exportado como
    "export default()", aqui pode importar com qualquer
     nome */
-import count from "./mixins/count.js";
-import users from "./mixins/users.js";
+import count from "./mixins/countOptionsApi.js";
+import users from "./mixins/usersOptionsApi.js";
 
 export default {
   /* Para poder trabalhar com este mixin: */
