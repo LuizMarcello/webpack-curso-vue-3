@@ -17,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 // Para o frontend, este backend será como uma "api", só
 // retornando os dados para este frontend
 // Colocar no frontend: api/users
-Route::get('/users', function () {
+/* Route::get('/users', function () {
     return User::all();
+}); */
+
+Route::get('/users', function () {
+    return User::get();
 });
 
 // Colocar no frontend: api/users/search
