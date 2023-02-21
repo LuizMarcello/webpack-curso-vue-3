@@ -9,7 +9,7 @@
 
   <!--  {{ userNotFounnnd }} -->
 
-  <!-- Com propriedades computadas, para interpretar o html -->
+  <!-- Com propriedade computada, para interpretar o html -->
   <div v-html="userNotFounnnd"></div>
 
   <router-view></router-view>
