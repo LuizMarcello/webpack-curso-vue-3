@@ -13,7 +13,10 @@ import {
   o content...
 */
 
-import App from "./AppComposablesCompositionApi.vue";
+import App from "./AppVuexOptionsApiBasico.vue";
+//import App from "./AppVuexCompositionApi.vue";
+//import App from "./AppVuexOptionsApi.vue";
+//import App from "./AppComposablesCompositionApi.vue";
 //import App from "./AppMixinsOptionsApi.vue";
 //import App from "./AppBuscaCompositionApi.vue";
 //import App from "./AppBuscaOptionsApi.vue";
@@ -55,6 +58,9 @@ import App from "./AppComposablesCompositionApi.vue";
 
 import router from "./routes/index.js";
 
+/* Avisando a aplicação que será usado o store(vuex) */
+import store from './store/store';
+
 /* Aqui, o componente principal "App.vue"
    é passado como parâmetro */
 const app = createApp(App);
@@ -69,6 +75,8 @@ app.component('Teste', {
 
 /* Utilizando o roteamento na aplicação */
 app.use(router);
+
+app.use(store)
 
 /* Aqui está sendo montada toda a aplicação,
    na div "app" do "index.html" */
