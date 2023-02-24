@@ -7,19 +7,21 @@ const store = createStore({
 
   /* Propriedades reativas */
   state: {
-    count: 0,
+    count: 0
 
   },
 
   mutations: {
-    /* Aqui alterando a propriedade reativa */
+    /* Aqui alterando a propriedade reativa "state" */
     incremenntt(state, payload) {
+      /* state.countt+=payload; */
       state.count++;
     }
   },
 
   actions: {
     incrementt(state, payload) {
+      /* commit: Para chamar a mutations */
       /* Aqui, está chamando a "mutations" acima,
          para alterar o valor do "state" acima */
       state.commit('incremenntt');
@@ -29,7 +31,7 @@ const store = createStore({
   /* Este é parecido com as "propriedades computadas": */
   getters: {
     getCounter(state) {
-      return 'Total count ' + state.count;
+      return 'O total do count ' + state.count;
     }
   }
 })

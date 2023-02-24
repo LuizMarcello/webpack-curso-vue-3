@@ -15,7 +15,7 @@
   <!-- No componente normal: "View": São os templates -->
   <button @click="incrementt">Add</button>
   <br />
-  <!-- Ou assim, chamando direto: -->
+  <!-- Ou assim, chamando direto do store: -->
   <button @click="$store.commit('incremenntt')">Add Direto</button>
   <br />
   <button @click="$store.dispatch('incrementt')">Add Direto</button>
