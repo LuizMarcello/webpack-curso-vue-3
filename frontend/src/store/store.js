@@ -14,7 +14,7 @@ const store = createStore({
   mutations: {
     /* Aqui alterando a propriedade reativa "state" */
     incremenntt(state, payload) {
-      /* state.countt+=payload; */
+      /* state.count+=payload; */
       state.count++;
     }
   },
