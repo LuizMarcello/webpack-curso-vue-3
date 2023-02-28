@@ -1,9 +1,7 @@
-import {
-  createStore
-} from 'vuex';
+import { createStore } from "vuex";
 
-import counteeer from './counter';
-/* import users from './users'; */
+import counteeer from "./counter";
+import usersss from "./users";
 
 const store = createStore({
   /* "Modules" na verdade, são os outros "stores" */
@@ -12,9 +10,8 @@ const store = createStore({
        é o mesmo que o nome do valor, escreve-se
        somente uma vêz. */
     counteeer,
-    /*  users */
-  }
-
-})
+    usersss,
+  },
+});
 
 export default store;
