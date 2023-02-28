@@ -15,27 +15,28 @@
   <!-- No componente normal: "View": São os templates -->
   <button @click="incrementt">Add</button>
   <br />
-  <!-- Ou assim, chamando direto: -->
-  <button @click="$store.commit('incremenntt')">Add Direto</button>
+  <!-- Ou assim, chamando direto do store: -->
+  <!-- <button @click="$store.commit('incremenntt')">Add Direto</button> -->
+  <!-- USando mapper pode passar parâmetro direto por aqui -->
+  <!-- <button @click="incremenntt(5)">Add Direto</button> -->
+  <button @click="incremenntt">Add Direto</button>
   <br />
-  <button @click="$store.dispatch('incrementt')">Add Direto</button>
-
+  <!-- <button @click="$store.dispatch('incrementt')">Add Direto</button> -->
+  <!-- USando mapper pode passar parâmetro direto por aqui -->
+  <button @click="incrementt">Add Direto</button>
   <br />
-
   <Counter />
-
-  {{ $store.state.count }}
-
-  <hr />
-
-  {{ $store.getters.getCounter }}
-
   <br />
-
+  {{ count }}
+  <hr />
+  {{ getCounter }}
+  <br />
   <router-view></router-view>
 </template>
 
 <script>
+import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
+
 /* Importando este componente */
 import Counter from "./components/CounterOptionsApiBasico.vue";
 
@@ -46,17 +47,33 @@ export default {
   },
   data() {},
 
+  /* Computadas */
+  /* Para pegar os "States" e "Getters" do store,
+     através dos seus "mappers": */
+  /* Os "mappers" estão disponíveis somente na "optionsApi" */
+  computed: {
+    /* Operador ES6 "spread": */
+    ...mapState(["count"]),
+    ...mapGetters(["getCounter"]),
+  },
+
   /* No componente normal: "Actions": Ação, Mudando as propriedades
-                         reativas. Os métodos, as funções. 
+                         reativas. Os métodos, as funções.
                          Altera o "state" */
   methods: {
     incrementt() {
       /* Dispatch: Para chamar a "actions" no store */
       //this.$store.dispatch("incrementt");
-      
+
       /* ou chamando direto a "mutations" no store: */
       this.$store.commit("incremenntt");
     },
+
+    /* Para pegar os "Actions" e "Mutations" do store
+       através dos seus "mappers", usa-se os "métodos": */
+    /* Operador ES6 "spread": */
+    ...mapActions(["incrementt"]),
+    ...mapMutations(["incremenntt"]),
   },
 };
 </script>

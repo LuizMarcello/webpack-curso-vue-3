@@ -1,37 +1,20 @@
 import {
   createStore
-} from "vuex";
+} from 'vuex';
+
+import counteeer from './counter';
+/* import users from './users'; */
 
 const store = createStore({
-  /* Criando aqui toda estrutura do "vuex": */
-
-  /* Propriedades reativas */
-  state: {
-    count: 0,
-
-  },
-
-  mutations: {
-    /* Aqui alterando a propriedade reativa */
-    incremenntt(state, payload) {
-      state.count++;
-    }
-  },
-
-  actions: {
-    incrementt(state, payload) {
-      /* Aqui, está chamando a "mutations" acima,
-         para alterar o valor do "state" acima */
-      state.commit('incremenntt');
-    },
-  },
-
-  /* Este é parecido com as "propriedades computadas": */
-  getters: {
-    getCounter(state) {
-      return 'Total count ' + state.count;
-    }
+  /* "Modules" na verdade, são os outros "stores" */
+  modules: {
+    /* No javascript, quando o o nome do índice
+       é o mesmo que o nome do valor, escreve-se
+       somente uma vêz. */
+    counteeer,
+    /*  users */
   }
+
 })
 
 export default store;
