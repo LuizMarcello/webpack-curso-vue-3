@@ -71,7 +71,7 @@ export default {
 
     /* Para pegar os "Actions" e "Mutations" do store
        através dos seus "mappers", usa-se os "métodos": */
-    /* Operador ES6 "spread": */
+    /* "..." Operador ES6 "spread": */
     ...mapActions(["incrementt"]),
     ...mapMutations(["incremenntt"]),
   },
