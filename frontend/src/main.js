@@ -13,8 +13,8 @@ import {
   o content...
 */
 
-import App from "./AppVuexModulosOptionsApi.vue";
-//import App from "./AppVuexCompositionApiBasico.vue";
+//import App from "./AppVuexModulosOptionsApi.vue";
+import App from "./AppVuexCompositionApiBasico.vue";
 //import App from "./AppVuexOptionsApiBasico.vue";
 //import App from "./AppVuexCompositionApi.vue";
 //import App from "./AppVuexOptionsApi.vue";

@@ -9,6 +9,7 @@ const store = createStore({
     /* No javascript, quando o o nome do índice
        é o mesmo que o nome do valor, escreve-se
        somente uma vêz. */
+    /* Na verdade, são os "namespaced" deles */
     counteeer,
     usersss,
   },

@@ -11,8 +11,14 @@ export default {
   /* É usado o "commit" para chamar a "mutations"  */
   mutations: {
     incremenntt(state, payload) {
-      state.count += payload;
-      /* state.count++; */
+      /* state.count += payload */;
+      state.count++;
+    },
+
+    decremenntt(state, payload) {
+      /* state.count += payload */
+      ;
+      state.count--;
     },
   },
 
@@ -32,7 +38,7 @@ export default {
   /* "getters" é parecido com as "propriedades computadas": */
   getters: {
     getCounter(state) {
-      return "O total do count " + state.count;
+      return "Total do count " + state.count;
     },
   },
 };

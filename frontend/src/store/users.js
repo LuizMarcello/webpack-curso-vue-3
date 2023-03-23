@@ -1,20 +1,11 @@
-import http from "../services/http";
-
+import http from '../services/http'
 export default {
   namespaced: true,
   /* Criando aqui toda estrutura do "vuex": */
 
   /* "state": Propriedades reativas */
   state: {
-    dataaa: [],
-  },
-
-  /* Nas mutations são alteradas a propriedade reativa "state" */
-  /* É usado o "commit" para chamar a "mutations"  */
-  mutations: {
-    setUsers(state, payload) {
-      state.dataaa = payload;
-    },
+    data: []
   },
 
   /* Ação, métodos, funções. */
@@ -22,22 +13,28 @@ export default {
      é sempre feito na "actions" */
   /* É usado o "dispatch" para chamar o "actions" */
   actions: {
-    async getUsers(state) {
+    async getUsers(state, payload) {
       try {
-        /* O "axios" sempre retorna "data" */
-        const { data } = await http.get("/api/users");
-        /* Chamando a "mutations" acima */
-        state.commit("setUsers", data);
+        const {
+          data
+        } = await http.get('/api/users');
+        state.commit('setUsers', data);
       } catch (error) {
-        console.log(error.response);
+        console.log(error);
       }
-    },
-
-    hideUsers(state) {
-      state.commit("setUsers", []);
     },
   },
 
+  /* Nas mutations são alteradas a propriedade reativa "state" */
+  /* É usado o "commit" para chamar a "mutations"  */
+  mutations: {
+    setUsers(state, payload) {
+      state.data = payload
+    }
+  },
+
   /* "getters" é parecido com as "propriedades computadas": */
-  getters: {},
+  getters: {
+
+  },
 };

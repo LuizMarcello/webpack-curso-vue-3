@@ -1,5 +1,5 @@
 <template>
-  {{ store.state.count }}
+  {{ store.state.counteeer.count }}
 </template>
 
 <script setup>

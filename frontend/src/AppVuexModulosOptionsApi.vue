@@ -1,9 +1,7 @@
 <template>
   <Counter />
   <br />
-  <button @click="$store.commit('counteeer/incremenntt', 10)">
-    Add Direto
-  </button>
+  <button @click="$store.commit('counteeer/incremenntt')">Add Direto</button>
   <br />
   <!-- Mutations: -->
   <button @click="incremenntt(10)">Add Método</button>
@@ -17,7 +15,7 @@
 
   <h2>Users</h2>
 
-  <template v-if="dddata.length > 0">
+  <!-- <template v-if="dddata.length > 0">
     <button @click="hideUsers">hide users</button>
 
     <ul>
@@ -25,11 +23,11 @@
         {{ usser.firstName }}
       </li>
     </ul>
-  </template>
+  </template> -->
 
-  <template v-else>
+  <!-- <template v-else>
     <button @click="getUsers">get users</button>
-  </template>
+  </template> -->
 </template>
 
 <script>
@@ -42,7 +40,7 @@ export default {
 
   /* Para pegar os "States" e "Getters" do store,
      através dos seus "mappers", usa-se as "computadas": */
-     /* Quando não tiver uma "ação" */
+  /* Quando não tiver uma "ação" */
   computed: {
     /* Operador ES6 "spread": */
     ...mapState({
@@ -61,7 +59,7 @@ export default {
 
   /* Para pegar os "Actions" e "Mutations" do store
      através dos seus "mappers", usa-se os "métodos": */
-     /* Quando tiver uma "ação" */
+  /* Quando tiver uma "ação" */
   methods: {
     /* "..." Operador ES6 "spread": */
     ...mapActions("usersss", ["getUsers", "hideUsers"]),

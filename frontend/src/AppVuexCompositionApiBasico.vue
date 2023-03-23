@@ -14,17 +14,18 @@
 
   <!-- No componente normal: "View": São os templates -->
 
-  <button @click="increment">Add</button>
+  <button @click="incrrement">Add</button>
+  <button @click="decrrement">Diminui</button>
 
   <br />
 
   <!-- Ou assim, chamando direto a "actions" do store: -->
-  <button @click="store.dispatch('incrementt')">Add</button>
-
+  <!-- <button @click="store.dispatch('incrementt')">Add</button>
+ -->
   <br />
 
   <!-- Ou assim, chamando direto a "mutations" do store -->
-  <button @click="store.commit('incremenntt',10)">Add</button>
+  <!-- <button @click="store.commit('incremenntt', 10)">Add</button> -->
 
   <br />
 
@@ -32,15 +33,25 @@
 
   <br />
 
-  {{ store.state.count }}
+  {{ count }}
 
   <br />
+  
+  <template v-if="data.length > 0">
+    <button @click="hideUsers">Hide users</button>
+    <ul>
+      <li v-for="(user, index) in data" :key="index">{{ user.firstName }}</li>
+    </ul>
+  </template>
+  <template v-else>
+    <button @click="getUsers">Get users</button>
+  </template>
 
   <!-- Como o "getters" parece uma propriedade computada,
      também não precisa abrir/fechar parenteses para chamar,
      como se fosse uma propriedade, apesar que o "getters"
      é uma função. -->
-  {{ store.getters.getCounter }}
+  <!-- {{ totalCount }} -->
 
   <router-view></router-view>
 </template>
@@ -48,14 +59,43 @@
 <script setup>
 import { useStore } from "vuex";
 
+import { computed } from "vue";
+
 /* Importando este componente */
 import Counter from "./components/CounterCompositionApiBasico.vue";
 
 /* Para usar no template */
 const store = useStore();
 
-function increment() {
+const count = computed(() => store.state.counteeer.count);
+
+const totalCount = computed(() => store.getters["counteeer/getCounter"]);
+
+//const incrrement = function () {
+//return store.commit("counteeer/incremenntt");
+//};
+
+//const decrrement = function () {
+//return store.commit("counteeer/decremenntt");
+//};
+
+/* Arrow function */
+//const incrrement = () =>
+/* Dispatch: Para chamar a "actions" no store */
+//store.commit("counteeer/incremenntt");
+
+/* Arrow function */
+const incrrement = () =>
   /* Dispatch: Para chamar a "actions" no store */
-  store.dispatch("incrementt");
-}
+  store.dispatch("counteeer/incrementt");
+
+/* Arrow functions */
+const decrrement = () =>
+  /* Dispatch: Para chamar a "actions" no store */
+  store.commit("counteeer/decremenntt");
+
+const data = computed(() => store.state.usersss.data);
+
+const getUsers = () => store.dispatch("usersss/getUsers");
+const hideUsers = () => store.commit("usersss/setUsers", []);
 </script>
