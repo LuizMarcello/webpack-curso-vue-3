@@ -1,39 +1,36 @@
 <template>
-  <div>
+  <div class="about">
     <h2>Abouttt</h2>
   </div>
 </template>
 
+<script>
 
-<script setup>
-/* Como "OptionsAPI" */
-//export default {
-  /* Aqui reatividade */
-  //data() {
-    //return {
-      //interval: "",
-    //};
-  //},
+export default {
+  data() {
+    return {
+      interval: ""
+    };
+  },
 
-  //mounted() {
-    //this.interval = setInterval(() => {
-      //console.log("mounted AboutView.vue");
-    //}, 1000);
-  //},
+  mounted() {
+    this.interval = setInterval(() => {
+      console.log("mounted");
+    }, 1000);
+  },
 
-  //unmounted() {
-    //clearInterval(this.interval);
-  //},
-//};
-
-/* Como "CompositionAmigavelAPI" */
-import { onMounted, onUnmounted } from "@vue/runtime-core";
-
-onMounted (() => {
-  console.log("mounted AboutView.vue");
-});
-
-onUnmounted(() => {
-  console.log('unmounted AboutView.vue')
-})
+  unmounted() {
+    clearInterval(this.interval);
+  }
+};
 </script>
+
+<style>
+@media (min-width: 1024px;) {
+  .about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>

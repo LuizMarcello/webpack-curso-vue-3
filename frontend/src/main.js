@@ -14,7 +14,7 @@ import {
 */
 
 //import App from "./AppVuexModulosOptionsApi.vue";
-import App from "./AppVuexCompositionApiBasico.vue";
+//import App from "./AppVuexCompositionApiBasico.vue";
 //import App from "./AppVuexOptionsApiBasico.vue";
 //import App from "./AppVuexCompositionApi.vue";
 //import App from "./AppVuexOptionsApi.vue";
@@ -57,6 +57,7 @@ import App from "./AppVuexCompositionApiBasico.vue";
 //import App from "./AppOptionsApi.vue";
 //import App from "./AppCompositionApi.vue";
 //import App from "./AppCompositionAmigavel.vue";
+import App from "./App.vue";
 
 import router from "./routes/index.js";
 
