@@ -14,16 +14,17 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |*/
 
-// Para o frontend, este backend será como uma "api", só
-// retornando os dados para o frontend
-// Colocar no frontend: api/users
-/* Route::get('/users', function () {
-    return User::all();
-}); */
-
+/* Para o frontend, este backend será como uma "api", só
+retornando os dados para o frontend
+Colocar no frontend: api/users */
 Route::get('/users', function () {
-    return User::get();
+    /* Automaticamente retorna como "JSON" */
+    return User::all();
 });
+
+//Route::get('/users', function () {
+    //return User::get();
+//});
 
 // Colocar no frontend: api/users/search
 Route::get('/users/search', function (Request $request) {
