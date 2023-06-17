@@ -59,7 +59,8 @@ import {
 //import App from "./AppCompositionAmigavel.vue";
 //import App from "./App.vue";
 //import App from "./AppListagemBackOptionsApi.vue";
-import App from "./AppListagDinamVforOptionsApi.vue";
+//import App from "./AppListagDinamVforOptionsApi.vue";
+import App from "./AppDiferCompositionOptionsApi.vue";
 
 import router from "./routes/index.js";
 

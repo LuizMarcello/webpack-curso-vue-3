@@ -5,13 +5,12 @@
 <script>
 /* options api */
 export default {
-  name: "Header",
+  name: "Header"
 
-  unmounted() {
-    console.log("unmounted header");
-  },
+  //unmounted() {
+  //console.log("unmounted header");
+  //},
 };
-
 </script>
 
 <style scoped></style>

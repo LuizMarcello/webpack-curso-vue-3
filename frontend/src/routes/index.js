@@ -41,7 +41,6 @@ const routes = [{
     //component: () => import("../views/UserCreateViewOptionsApi.vue"),
     component: () => import("../views/UserCreateViewCompositionApi.vue"),
   },
-
 ];
 
 const router = createRouter({
