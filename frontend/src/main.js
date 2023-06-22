@@ -3,9 +3,7 @@
 /* Este componente é o "ponto de entrada" da aplicação */
 
 /* Pegando aqui a "instância do vue" */
-import {
-  createApp
-} from "vue";
+import { createApp } from "vue";
 // ou
 //import {
 //createApp
@@ -16,6 +14,7 @@ import {
   o content...
 */
 
+import App from "./App.vue";
 //import App from "./AppVuexModulosOptionsApi.vue";
 //import App from "./AppVuexCompositionApiBasico.vue";
 //import App from "./AppVuexOptionsApiBasico.vue";
@@ -60,15 +59,14 @@ import {
 //import App from "./AppOptionsApi.vue";
 //import App from "./AppCompositionApi.vue";
 //import App from "./AppCompositionAmigavel.vue";
-//import App from "./App.vue";
 //import App from "./AppListagemBackOptionsApi.vue";
 //import App from "./AppListagDinamVforOptionsApi.vue";
-import App from "./AppDiferCompositionOptionsApi.vue";
+//import App from "./AppDiferCompositionOptionsApi.vue";
 
 import router from "./routes/index.js";
 
 /* Avisando a aplicação que será usado o store(vuex) */
-import store from './store/store';
+import store from "./store/store";
 
 /* Aqui, o componente principal "App.vue"
    é passado como parâmetro */
@@ -78,14 +76,14 @@ const app = createApp(App);
 /* 1º parâmetro: nome-do-componente */
 /* 2º parâmetro: estrutura-do-componente
    (usando a propriedade "template") */
-app.component('Teste', {
-  template: '<h2>Teeeste</h2>'
-})
+app.component("Teste", {
+  template: "<h2>Teeeste</h2>",
+});
 
 /* Utilizando o roteamento na aplicação */
 app.use(router);
 
-app.use(store)
+app.use(store);
 
 /* Aqui está sendo montada toda a aplicação,
    na div "app" do "index.html" */

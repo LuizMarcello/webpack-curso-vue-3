@@ -3,6 +3,7 @@ const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 /* Plugin que coloca em um arquivo separado todos os css´s criados nos componentes */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { fileURLToPath } = require("url");
 
 /* Aqui é onde tudo vai acontecer */
 module.exports = {
@@ -31,6 +32,7 @@ module.exports = {
     extensions: [".js", ".json", ".vue"],
     alias: {
       vue: "vue/dist/vue.esm-bundler.js",
+      //"@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
 
