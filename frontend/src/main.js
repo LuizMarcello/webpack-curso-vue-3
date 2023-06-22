@@ -1,4 +1,7 @@
 /* Este componente é o "ponto de entrada" da aplicação */
+/* Este componente é o "ponto de entrada" da aplicação */
+/* Este componente é o "ponto de entrada" da aplicação */
+
 /* Pegando aqui a "instância do vue" */
 import {
   createApp
