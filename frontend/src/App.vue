@@ -3,6 +3,13 @@
   <!--Aqui estão sendo montados todos os componentes-->
   <!--Aqui estão sendo montados todos os componentes-->
 
+  {{ count }}
+  <br />
+  {{ userName }}
+
+  <ul>
+    <li v-for="user in userrrs">{{ user.firstName }} - {{ user.age }}</li>
+  </ul>
   <header>
     <!--  <img
       class="logo"
@@ -33,31 +40,46 @@
 </template>
 
 <script>
+/* No "optionsApi", para acessar as propriedades,
+   tem que usar o "this". */
 import Header from "../src/components/Header.vue";
 
 export default {
   /* Registrando este componente importado acima */
   components: { Header },
 
+  /* Aqui vão as propriedades reativas, no options.api */
   data() {
-    /* Aqui vão as propriedades reativas no options.api */
     return {
-      count: 0,
-      showHeader: false,
+      count: 6,
+      showHeader: true,
+      userName: "LuizMarcello",
+      /* Um array de objetos */
+      userrrs: [
+        {
+          firstName: "Luiz",
+          age: 62
+        },
+        {
+          firstName: "Valéria",
+          age: 42
+        }
+      ]
     };
   },
   mounted() {
-    console.log("mounted");
+    //console.log("mounted");
+    console.log(this.count)
   },
   /* Somente quando uma propriedade é alterada no componente */
   updated() {
-    console.log("updated");
-  },
+    //console.log("updated");
+  }
 };
 </script>
 
 <style scoped>
-@import './assets/app.css';
+@import "./assets/app.css";
 
 #app {
   max-width: 1280px;
