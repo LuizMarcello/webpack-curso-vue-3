@@ -14,7 +14,7 @@ import { createApp } from "vue";
   o content...
 */
 
-import App from "./App.vue";
+import App from "./AppDefaultVBindClasses.vue";
 //import App from "./AppVuexModulosOptionsApi.vue";
 //import App from "./AppVuexCompositionApiBasico.vue";
 //import App from "./AppVuexOptionsApiBasico.vue";

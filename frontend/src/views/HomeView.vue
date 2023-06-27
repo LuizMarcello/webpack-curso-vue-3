@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h2>Homeee</h2>
+    <h2>Este é o componente HomeView</h2>
   </div>
 </template>

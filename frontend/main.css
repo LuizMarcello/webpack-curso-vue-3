@@ -4,11 +4,17 @@
 #my-app {
   background-color: aqua;
 }
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[3].use[0]!./src/App.vue?vue&type=style&index=0&id=7ba5bd90&scoped=true&lang=css ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[3].use[0]!./src/AppDefaultVBindClasses.vue?vue&type=style&index=0&id=2c5aed8c&scoped=true&lang=css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
 
-#app[data-v-7ba5bd90] {
+.my-class[data-v-2c5aed8c] {
+  border: solid 4px red;
+}
+.my-other-class[data-v-2c5aed8c] {
+  border: solid 4px blue;
+}
+#app[data-v-2c5aed8c] {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -21,69 +27,69 @@
   color: #2c3e50;
   margin-top: 60px;
 }
-header[data-v-7ba5bd90] {
+header[data-v-2c5aed8c] {
   line-height: 1.5;
   max-height: 100vh;
 }
-.logo[data-v-7ba5bd90] {
+.logo[data-v-2c5aed8c] {
   display: block;
   margin: 0 auto 2rem;
 }
-a[data-v-7ba5bd90],
-.green[data-v-7ba5bd90] {
+a[data-v-2c5aed8c],
+.green[data-v-2c5aed8c] {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
 @media (hover: hover) {
-a[data-v-7ba5bd90]:hover {
+a[data-v-2c5aed8c]:hover {
     background-color: hsla(160, 100%, 37%, 1);
 }
 }
-nav[data-v-7ba5bd90] {
+nav[data-v-2c5aed8c] {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
-nav a.router-link-exact-active[data-v-7ba5bd90] {
+nav a.router-link-exact-active[data-v-2c5aed8c] {
   color: var(--color-text);
 }
-av a.router-link-exact-active[data-v-7ba5bd90]:hover {
+av a.router-link-exact-active[data-v-2c5aed8c]:hover {
   background-color: transparent;
 }
-nav a[data-v-7ba5bd90] {
+nav a[data-v-2c5aed8c] {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1 px solid var(--color-border);
 }
-nav a[data-v-7ba5bd90]:first-of-type {
+nav a[data-v-2c5aed8c]:first-of-type {
   border: 0;
 }
 @media (min-width: 1024) {
-body[data-v-7ba5bd90] {
+body[data-v-2c5aed8c] {
     display: flex;
     place-items: center;
 }
-#app[data-v-7ba5bd90] {
+#app[data-v-2c5aed8c] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
 }
-header[data-v-7ba5bd90] {
+header[data-v-2c5aed8c] {
     display: flex;
     place-items: center;
     padding-right: calc(var(var(--section-gap) / 2));
 }
-header .wrapper[data-v-7ba5bd90] {
+header .wrapper[data-v-2c5aed8c] {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
 }
-.logo[data-v-7ba5bd90] {
+.logo[data-v-2c5aed8c] {
     margin: 0 2rem 0 0;
 }
-nav[data-v-7ba5bd90] {
+nav[data-v-2c5aed8c] {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
